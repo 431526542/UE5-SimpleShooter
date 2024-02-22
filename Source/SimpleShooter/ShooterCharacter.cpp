@@ -110,7 +110,13 @@ float AShooterCharacter::TakeDamage(float DamageAmount, FDamageEvent const& Dama
 
 bool AShooterCharacter::IsDead() const
 {
+	UE_LOG(LogTemp, Warning, TEXT("Dead"));
 	return Health <= 0;
+}
+
+float AShooterCharacter::GetHealthPercent() const
+{
+	return Health / MaxHealth;
 }
 
 
